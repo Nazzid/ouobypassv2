@@ -18,8 +18,9 @@ const fs = require('fs');
 		headless: false,
 		args: [
 		`--load-extension=${__dirname}/UB/`,
-		`--disable-extensions-except=${__dirname}/UB/`
-			
+		`--disable-extensions-except=${__dirname}/UB/`,
+	        '--no-sandbox',
+                '--disable-setuid-sandbox'
 		]
 	
 	});
