@@ -10,7 +10,7 @@ const fs = require('fs');
 	if (!fs.existsSync(dir)){
 		fs.mkdirSync(dir);
 	}
-	await fs.createReadStream('ub.zip').pipe(unzipper.Extract({ path: 'UB/' }))
+	await fs.createReadStream(`${__dirname}/UB.zip`).pipe(unzipper.Extract({ path: `${__dirname}/UB/` }))
 	
 	await wait(4000)
 
