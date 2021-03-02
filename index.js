@@ -15,7 +15,7 @@ const fs = require('fs');
 	await wait(4000)
 
 	const browser = await puppeteer.launch({
-		headless: false,
+		headless: true,
 		args: [
 		`--load-extension=${__dirname}/UB/`,
 		`--disable-extensions-except=${__dirname}/UB/`,
